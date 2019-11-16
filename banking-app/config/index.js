@@ -5,7 +5,8 @@ const config = {
     mysqlUser: "root",
     mysqlPassword: "cmpepassword",
     mysqlHost: "cmpedatabase.cxwydwkipclw.us-east-1.rds.amazonaws.com",
-    mysqlDatabase: "banking-app"
+    mysqlDatabase: "banking-app",
+    secret: "cmpe_secure_bank"
 };
 
 module.exports = config;
