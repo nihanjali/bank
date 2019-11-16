@@ -1,15 +1,18 @@
-let express = require('express');
-import config from '../config';
+"use strict";
+const express = require("express");
 
-let accountRouter = require('../src/modules/account/router/accounts');
-
-let app = express();
+const app = express();
 
 app.use(express.json());
+
 app.use(express.urlencoded({ extended: false }));
 
-app.use('/account', accountRouter);
+const { serverPort } = require("../config");
 
-app.listen(config.port, () => console.log(`Bank-app server listening on ${config.port}`));
-module.exports = app;
+const accountsRouter = require("../src/routes/accounts");
 
+app.use("/accounts", accountsRouter);
+
+app.listen(serverPort, () => {
+    console.log(`Bank Server listening on port ${serverPort}`);
+});
