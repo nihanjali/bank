@@ -4,6 +4,7 @@ let router = express.Router();
 const pool = require('../../bin/pool');
 const { STATUS_CODE, MESSAGES } = require('../../config/constants');
 const { validateTransfer } = require("../validations/transferValidations");
+import validateGetTransfers from "../validations/getTransfersValidation";
 
 router.post("/", (req, res) => {
     const { error } = validateTransfer(req.body);
@@ -21,5 +22,21 @@ router.post("/", (req, res) => {
         }
     });
 });
+
+router.get("/:user_id", (req, res) => {
+    const { error } = validateGetTransfers(req.params);
+    if (error)
+        res.status(STATUS_CODE.BAD_REQUEST).send(error.details[0].message);
+
+    let sql = `select * from transactions where from_account_number=${req.params.user_id} OR to_account_number=${req.params.user_id}`;
+    pool.query(sql, (err, result) => {
+        if (err) {
+            console.log(err);
+            res.status(STATUS_CODE.INTERNAL_SERVER_ERROR).end(MESSAGES.INTERNAL_SERVER_ERROR);
+        }
+        
+        res.status(STATUS_CODE.SUCCESS).send(result);
+    });
+})
 
 module.exports = router;
