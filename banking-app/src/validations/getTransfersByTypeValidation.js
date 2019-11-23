@@ -4,7 +4,8 @@ const Joi = require("joi");
 const validateGetTransfersByType =  (transfer) => {
   const schema = {
     user_id: Joi.number().required(),
-    trans_type: Joi.string().required()
+    trans_type: Joi.string().required(),
+    account_number: Joi.string().required()
   };
 
   return Joi.validate(transfer, schema);
