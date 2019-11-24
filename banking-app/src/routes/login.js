@@ -23,22 +23,22 @@ router.post("/", (req, res) => {
             if (passwordHash.verify(req.body.password, result[0][0].password)) {
                 const payload = {
                     email_id: req.body.email_id
-                  };
-                  const token = jwt.sign(payload, secret, {
+                };
+                const token = jwt.sign(payload, secret, {
                     expiresIn: 900000 // in seconds
-                  });
-                  let response = {
-                      status: MESSAGES.SUCCESS,
-                      token: 'JWT ' + token
-                  };
-                res.status(STATUS_CODE.SUCCESS).end(JSON.stringify(response));
+                });
+                let response = {
+                    status: MESSAGES.SUCCESS,
+                    token: 'JWT ' + token
+                };
+                res.status(STATUS_CODE.SUCCESS).end(response);
             }
             else {
-                res.status(STATUS_CODE.UNAUTHORIZED).end(JSON.stringify(MESSAGES.INVALID_CREDENTIALS));
+                res.status(STATUS_CODE.UNAUTHORIZED).end(MESSAGES.INVALID_CREDENTIALS);
             }
         }
         else {
-            res.status(STATUS_CODE.UNAUTHORIZED).end(JSON.stringify(MESSAGES.INVALID_CREDENTIALS));
+            res.status(STATUS_CODE.UNAUTHORIZED).end(MESSAGES.INVALID_CREDENTIALS);
         }
     });
 });

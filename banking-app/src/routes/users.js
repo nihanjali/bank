@@ -20,7 +20,7 @@ router.post("/", (req, res) => {
             res.status(STATUS_CODE.INTERNAL_SERVER_ERROR).end(MESSAGES.INTERNAL_SERVER_ERROR);
         }
         if (result && result.length > 0 && result[0][0]) {
-            res.status(STATUS_CODE.SUCCESS).end(JSON.stringify(result[0][0].status));
+            res.status(STATUS_CODE.SUCCESS).end(result[0][0].status);
         }
     });
 });
