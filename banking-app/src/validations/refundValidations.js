@@ -4,7 +4,7 @@ const Joi = require("joi");
 function validateRefund(refund) {
   const schema = {
     user_id: Joi.number().required(),
-    from_account_number: Joi.number().required(),
+    to_account_number: Joi.number().required(),
     trans_amount: Joi.number().required()
   };
 

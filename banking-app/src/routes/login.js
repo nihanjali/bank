@@ -31,7 +31,7 @@ router.post("/", (req, res) => {
                     status: MESSAGES.SUCCESS,
                     token: 'JWT ' + token
                 };
-                res.status(STATUS_CODE.SUCCESS).end(response);
+                res.status(STATUS_CODE.SUCCESS).send(response);
             }
             else {
                 res.status(STATUS_CODE.UNAUTHORIZED).end(MESSAGES.INVALID_CREDENTIALS);

@@ -31,7 +31,7 @@ router.get("/:user_id/:account_number/:trans_type", (req, res) => {
     } else if (req.params.trans_type == 'CREDIT') {
         sql = `select * from transactions where user_id=${req.params.user_id} AND to_account_number=${req.params.account_number}`;
     } else {
-        sql = `select * from transactions where user_id=${req.params.user_id} AND (from_account_number=${req.params.account_number} OR to_account_number=${req.params.account_number}) AND trans_type LIKE "${req.params.trans_type}"`;
+        sql = `select * from transactions where user_id=${req.params.user_id} AND (from_account_number=${req.params.account_number} OR to_account_number=${req.params.account_number}) AND trans_type LIKE '${req.params.trans_type}%'`;
     }
 
     pool.query(sql, (err, result) => {

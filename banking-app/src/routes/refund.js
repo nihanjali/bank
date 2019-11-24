@@ -10,7 +10,7 @@ router.post("/", (req, res) => {
     if (error)
         res.status(STATUS_CODE.BAD_REQUEST).send(error.details[0].message);
 
-    let sql = `CALL Refund_put(${req.body.user_id}, ${req.body.from_account_number}, ${req.body.trans_amount});`;
+    let sql = `CALL Refund_put(${req.body.user_id}, ${req.body.to_account_number}, ${req.body.trans_amount});`;
     pool.query(sql, (err, result) => {
         if (err) {
             console.log(err);
