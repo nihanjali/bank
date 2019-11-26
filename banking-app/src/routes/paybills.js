@@ -14,10 +14,10 @@ router.post("/", (req, res) => {
     pool.query(sql, (err, result) => {
         if (err) {
             console.log(err);
-            res.status(STATUS_CODE.INTERNAL_SERVER_ERROR).end(MESSAGES.INTERNAL_SERVER_ERROR);
+            res.status(STATUS_CODE.INTERNAL_SERVER_ERROR).send(MESSAGES.INTERNAL_SERVER_ERROR);
         }
         if (result && result.length > 0 && result[0][0]) {
-            res.status(STATUS_CODE.SUCCESS).end(result[0][0].status);
+            res.status(STATUS_CODE.SUCCESS).send(result[0][0].status);
         }
     });
 });

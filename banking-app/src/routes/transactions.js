@@ -14,7 +14,7 @@ router.get("/:user_id/:account_number", (req, res) => {
     pool.query(sql, (err, result) => {
         if (err) {
             console.log(err);
-            res.status(STATUS_CODE.INTERNAL_SERVER_ERROR).end(MESSAGES.INTERNAL_SERVER_ERROR);
+            res.status(STATUS_CODE.INTERNAL_SERVER_ERROR).send(MESSAGES.INTERNAL_SERVER_ERROR);
         }
 
         res.status(STATUS_CODE.SUCCESS).send(result);
@@ -37,7 +37,7 @@ router.get("/:user_id/:account_number/:trans_type", (req, res) => {
     pool.query(sql, (err, result) => {
         if (err) {
             console.log(err);
-            res.status(STATUS_CODE.INTERNAL_SERVER_ERROR).end(MESSAGES.INTERNAL_SERVER_ERROR);
+            res.status(STATUS_CODE.INTERNAL_SERVER_ERROR).send(MESSAGES.INTERNAL_SERVER_ERROR);
         }
 
         res.status(STATUS_CODE.SUCCESS).send(result);
