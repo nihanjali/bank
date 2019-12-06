@@ -28,72 +28,72 @@ During our initial phase of project, we worked on analyzing the requirements and
 
 > **Division of Work**
 
->Different components of the application and APIs were divided among team members.
+Different components of the application and APIs were divided among team members.
 
->**What tasks did I work on / complete?
+>**What tasks did I work on / complete?**
 
->I worked on setting up initial boiler plate setup and designed the database schema. I created a database instance in Amazon RDS. 
+I worked on setting up initial boiler plate setup and designed the database schema. I created a database instance in Amazon RDS. 
 Also worked on creating table for Users.
 
->**What am I planning to work on next?
+>**What am I planning to work on next?**
 
->I will have to work on the APIs to create Users in the application and APIs to create accounts to registered Users.
+I will have to work on the APIs to create Users in the application and APIs to create accounts to registered Users.
 
->**What tasks are blocked waiting on another team member?
+>**What tasks are blocked waiting on another team member?**
 
->I am not blocked by anything.
+I am not blocked by anything.
 
 ### Week 2
 
 >**Agenda**
 
->APIs to create a User in the application and create accounts to the registered user. Setting up a template route for an API so that it could be reused in other APIs. Based on the progress, we were sure, we could complete the project ahead of time.
+APIs to create a User in the application and create accounts to the registered user. Setting up a template route for an API so that it could be reused in other APIs. Based on the progress, we were sure, we could complete the project ahead of time.
 
->**What tasks did I work on / complete?
+>**What tasks did I work on / complete?**
 
->Created base code for the APIs I am working on and ensured they hit the database.
+Created base code for the APIs I am working on and ensured they hit the database.
 
->**What am I planning to work on next?
+>**What am I planning to work on next?**
 
->Create stored procedures required for the functionality of Create User and Create Account functionalities.
+Create stored procedures required for the functionality of Create User and Create Account functionalities.
 
->**What tasks are blocked waiting on another team member?
+>**What tasks are blocked waiting on another team member?**
 
->I am not blocked by any other tasks.
+I am not blocked by any other tasks.
 
 
 ### Week 3
 
 >**Agenda**
 
->Discussion about progress and which extra credit tasks we should opt for was selected.
+Discussion about progress and which extra credit tasks we should opt for was selected.
 
 >**What tasks did I work on / complete?**
 
->Completed the APIs required for creating Users and Accounts.
+Completed the APIs required for creating Users and Accounts.
 
 >**What am I planning to work on next?**
 
->Unit test the APIs and ensure the functionality is working fine.
+Unit test the APIs and ensure the functionality is working fine.
 
 >**What tasks are blocked waiting on another team member?**
 
->I am not blocked by anything.
+I am not blocked by anything.
 
 ### Week 4
 
 >**Agenda**
 
->Discussion about progress of extra credit tasks was done. Feedback was shared regarding the frequency of project board updates.
+Discussion about progress of extra credit tasks was done. Feedback was shared regarding the frequency of project board updates.
 
 >**What tasks did I work on / complete?**
 
->I fixed the bugs in the application and modified the output format.
+I fixed the bugs in the application and modified the output format.
 
 >**What am I planning to work on next?**
 
->Verifying if all the functionalities work well together when integrated.
+Verifying if all the functionalities work well together when integrated.
 
 >**What tasks are blocked waiting on another team member?**
 
->I am not blocked by anything.
+I am not blocked by anything.
